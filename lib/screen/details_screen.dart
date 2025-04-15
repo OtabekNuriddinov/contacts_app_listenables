@@ -50,6 +50,7 @@ class DetailsPage extends StatelessWidget {
                       );
                       context.contactsController.addContact(newContact);
                       Navigator.pop(context);
+                      AppSnackBar.msg(context, "1 contact added");
                     }
                     else{
                       AppSnackBar.msg(context, "You should fill all the fields!");
@@ -77,6 +78,7 @@ class DetailsPage extends StatelessWidget {
                               phoneController.text,
                             );
                             Navigator.pop(context);
+                            AppSnackBar.msg(context, "1 Contact edited");
                           },
                           title: "Update",
                         )),

@@ -168,7 +168,7 @@ class HomePage extends StatelessWidget {
         child: Icon(
           Icons.add,
           color: Colors.white,
-          size: 30,
+          size: 34,
         ),
       ),
     );

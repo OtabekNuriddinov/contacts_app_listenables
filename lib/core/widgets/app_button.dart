@@ -22,7 +22,11 @@ class AppButton extends StatelessWidget {
       ),
       child: Text(
         title,
-        style: TextStyle(),
+        style: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: Colors.white
+        ),
       ),
     );
   }
