@@ -39,29 +39,6 @@ class ContactsController extends ChangeNotifier {
     }
   }
 
-  Widget twoChar(String str) {
-    String firstTwoChars = str.substring(0, 2);
-    return Text(
-      firstTwoChars,
-      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-    );
-  }
-
-  final Map<int, Color> _colorMap = {};
-
-  Color getColorForContact(Contact contact) {
-    if (_colorMap.containsKey(contact.id)) {
-      return _colorMap[contact.id]!;
-    } else {
-      final baseColor = Colors.primaries[Random().nextInt(
-        Colors.primaries.length,
-      )];
-      final color = baseColor.shade400;
-      _colorMap[contact.id] = color;
-      return color;
-    }
-  }
-
   void sortAZ(List<Contact> list) {
     list.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
     notifyListeners();

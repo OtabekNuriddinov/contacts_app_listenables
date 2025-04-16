@@ -89,7 +89,7 @@ class DetailsPage extends StatelessWidget {
                             Navigator.pop(context);
                           },
                           title: "Cancel",
-                        )),
+                        ),),
                   ],
                 )
             ],

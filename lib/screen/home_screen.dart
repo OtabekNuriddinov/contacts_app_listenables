@@ -1,7 +1,9 @@
 
-import 'package:contacts_app_listenables/core/utils/app_dialog.dart';
-import 'package:contacts_app_listenables/core/utils/app_snackbar.dart';
+import '/core/utils/app_dialog.dart';
+import '/core/utils/app_snackbar.dart';
 
+import '../core/methods/get_color.dart';
+import '../core/methods/two_char_widget.dart';
 import '/core/extensions/build_context.dart';
 import 'package:flutter/material.dart';
 
@@ -89,8 +91,8 @@ class HomePage extends StatelessWidget {
                       leading: CircleAvatar(
                         radius: 20,
                         backgroundColor:
-                        context.contactsController.getColorForContact(item),
-                        child: context.contactsController.twoChar(item.name),
+                        getColorForContact(item),
+                        child: twoChar(item.name),
                       ),
                       title: Text(item.name),
                       titleTextStyle:
